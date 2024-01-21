@@ -1,0 +1,131 @@
+.admin-event-container * {
+  font-family: inherit;
+  font-style: inherit;
+  box-sizing: border-box;
+  list-style: none;
+}
+.event-main-body {
+  width: 100%;
+}
+.admin-event-container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.admin-event-container {
+  display: flex;
+  max-width: 100%;
+  width: 90%;
+  margin: 2rem auto;
+}
+.event-end-container,
+.event-start-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
+  flex-flow: row wrap;
+}
+.event-date-container p {
+  margin-bottom: 0 !important;
+}
+.event-date-container p:nth-child(2) {
+  white-space: nowrap;
+}
+.event-date-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15%;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
+.event-main-body ul {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  align-items: start;
+  column-gap: 4%;
+}
+@media (max-width: 768px) {
+  .event-main-body ul {
+    grid-template-columns: 100%;
+  }
+}
+li.event-nav-container {
+  line-height: 1.4em;
+  color: #1a1a1a;
+  padding: 1rem 0;
+  display: block;
+}
+
+.event-title-list {
+  display: block;
+  line-height: 1.2;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+}
+
+h2.event-title {
+  margin: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.event-pagination {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+/* login form container */
+#eventAdminFormContainer-parent.hide-eventForm {
+  display: none;
+}
+#eventAdminFormContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 20px 5px #f5f5f5ba;
+  z-index: 9999999999;
+  background: #fff;
+}
+#eventAdminFormContainer input {
+  height: 50px;
+  width: auto;
+}
+#eventAdminFormContainer #closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  padding: 10px;
+}
+#eventAdminFormContainer form * {
+  display: block;
+}
+#eventAdminFormContainer form label {
+  margin-top: 10px;
+}
+#eventAdminFormContainer form input {
+  width: 100%;
+}
+#eventAdminFormContainer form button#submitBtn {
+  margin-top: 20px;
+}
+
+.eventAdminFormContainer-blur {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(2px);
+}
